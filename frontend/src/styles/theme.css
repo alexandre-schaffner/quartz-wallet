@@ -1,0 +1,31 @@
+:root {
+    --color-bg: #000000;
+    --color-txt: #ffffff;
+    
+    --color-bg-rev: #1B1B1B;
+    --color-txt-rev: #ffffff;
+    
+    --color-bg-alt: #F5F5F0;
+
+
+    --color-accent-0: #E2D679;
+    --color-accent-1: #5ECF99;
+    --color-accent-2: #54DAEC;
+    --color-accent-3: #FFD73F;
+
+    --radius-s: 4px; /* content */
+    --radius-m: 12px; /* buttons */
+    --radius-l: 24px; /* cards */
+
+    --space-s: 2px;
+    --space-m: 6px;
+    --space-l: 12px;
+    --space-xl: 24px;
+
+    --duration-slow: 300ms;
+    --duration-fast: 100ms;
+    --duration-layout: 300ms;
+
+    --border-m: 3px;
+    --color-border: #010101;
+}

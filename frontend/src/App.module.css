@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  background-color: var(--color-bg);
+
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+
+  display: grid;
+  grid-template-columns: 200px auto;
+  flex-direction: row;
+  transition-duration: var(--duration-layout);
+}
+
+.App > *:nth-child(2) {
+  flex: 1;
+}
+
+.App.mobile {
+  grid-template-columns: 0px auto;
+}
