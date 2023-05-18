@@ -6,6 +6,7 @@ import './styles/global.css';
 import './styles/theme.css';
 
 import App from './App';
+import { ThemeProvider } from './hooks/ThemeProvider';
 
 const root = document.getElementById('root');
 
@@ -15,4 +16,8 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-render(() => <Router><App /></Router>, root!);
+render(() => <Router>
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>
+</Router>, root!);

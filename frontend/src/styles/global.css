@@ -11,10 +11,33 @@ code {
 }
 
 * {
-    box-sizing: border-box;
-    overflow: hidden;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, p, button {
-    color: var(--color-txt);
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button {
+  color: var(--color-txt);
+}
+
+.catchy {
+  position: relative;
+}
+
+.catchy::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: " ";
+  user-select: none;
+  pointer-events: none;
+  background-image: url("../assets/noise/paper.jpg");
+  background-repeat: space;
+  opacity: 0.1;
+  background-color: transparent;
 }

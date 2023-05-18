@@ -1,31 +1,69 @@
 :root {
-    --color-bg: #000000;
-    --color-txt: #ffffff;
-    
-    --color-bg-rev: #1B1B1B;
-    --color-txt-rev: #ffffff;
-    
-    --color-bg-alt: #F5F5F0;
+  --color-bg: #000000;
+  --color-txt: #ffffff;
 
+  --color-bg-rev: #1b1b1b;
+  --color-txt-rev: #ffffff;
 
-    --color-accent-0: #E2D679;
-    --color-accent-1: #5ECF99;
-    --color-accent-2: #54DAEC;
-    --color-accent-3: #FFD73F;
+  --color-bg-alt: #f5f5f0;
 
-    --radius-s: 4px; /* content */
-    --radius-m: 12px; /* buttons */
-    --radius-l: 24px; /* cards */
+  --color-accent-0: #e2d679;
+  --color-accent-1: #5ecf99;
+  --color-accent-2: #54daec;
+  --color-accent-3: #ffd73f;
 
-    --space-s: 2px;
-    --space-m: 6px;
-    --space-l: 12px;
-    --space-xl: 24px;
+  --radius-s: 4px; /* content */
+  --radius-m: 12px; /* buttons */
+  --radius-l: 24px; /* cards */
 
-    --duration-slow: 300ms;
-    --duration-fast: 100ms;
-    --duration-layout: 300ms;
+  --space-s: 2px;
+  --space-m: 6px;
+  --space-l: 12px;
+  --space-xl: 24px;
 
-    --border-m: 3px;
-    --color-border: #010101;
+  --duration-slow: 300ms;
+  --duration-fast: 100ms;
+  --duration-layout: 300ms;
+
+  --border-m: 3px;
+  --color-border: #010101;
+}
+
+.light,
+.dark {
+  --radius-s: 4px; /* content */
+  --radius-m: 12px; /* buttons */
+  --radius-l: 24px; /* cards */
+
+  --space-s: 2px;
+  --space-m: 6px;
+  --space-l: 12px;
+  --space-xl: 24px;
+}
+
+.dark {
+  --color-bg: #181818;
+  --color-txt: #CFC2A8;
+
+  --color-bg-rev: #262625;
+  --color-txt-rev: #CFC2A8;
+
+  --color-bg-alt: #f5f5f0;
+
+  --color-accent-0: #e2d679;
+}
+
+.light {
+    --color-bg: #F7F9F0;
+    --color-txt: #0a0a08;
+  
+    --color-bg-rev: #dfe2d3;
+    --color-txt-rev: #0a0a08;
+  
+    --color-bg-alt: #f5f5f0;
+  
+    --color-accent-0: rgb(94, 86, 30);
+  }
+
+.solarpunk {
 }

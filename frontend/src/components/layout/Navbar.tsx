@@ -20,12 +20,12 @@ type NavbarProps = {
 const Navbar: Component<NavbarProps> = (props) => {
     const { isMobile } = useLayout();
 
-    const desktopLinks = () => props.pages.map(({ url, name: n, icon }) => <A href={url} activeClass={styles.selected}><Icon ion={icon} /> {n}</A>);
+    const desktopLinks = () => props.pages.map(({ url, name: n, icon }) => <A href={url} activeClass={[styles.selected, "catchy"].join(" ")}><Icon ion={icon} /> {n}</A>);
     const mobileLinks = () => props.pages.map(({ url, name: n, icon }) => <A href={url} activeClass={styles.selected}><Icon ion={icon} /></A>);
 
     return <>
-        <nav class={[styles.desktop, isMobile() && styles.off].join(" ")}>
-            {desktopLinks()};
+        <nav class={[styles.desktop, isMobile() && styles.off, "catchy"].join(" ")}>
+            {desktopLinks()}
         </nav>
         <nav class={[styles.bar, !isMobile() && styles.off].join(" ")}>{mobileLinks()}</nav>
     </>
