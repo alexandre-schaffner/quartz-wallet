@@ -9,6 +9,8 @@ services:
     command: "yarn start --host"
     ports:
       - "3000:3000"
+    volumes:
+      - "./frontend:/build"
   contracts:
     container_name: quartz-node
     build:
@@ -17,6 +19,8 @@ services:
     command: "yarn run hardhat node"
     ports:
       - "8545:8545"
+    volumes:
+      - "./contracts:/build"
   backend:
     container_name: quartz-backend
     build:
@@ -25,3 +29,5 @@ services:
     command: "yarn start"
     ports:
       - "8080:8080"
+    volumes:
+      - "./backend:/build"
