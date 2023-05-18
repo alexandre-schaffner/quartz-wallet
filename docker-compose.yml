@@ -1,27 +1,27 @@
 # Docker Compose for local development.
 version: "2.1"
 services:
-  dashboard:
-    container_name: frontend
+  frontend:
+    container_name: quartz-frontend
     build:
       context: frontend
       dockerfile: Dockerfile
     command: "yarn start --host"
     ports:
       - "3000:3000"
-  # contracts:
-  #   container_name: contracts
-  #   build:
-  #     context: contracts
-  #     dockerfile: Dockerfile
-  #   command: "yarn start"
-  #   ports:
-  #     - "4000:8000"
-  # backend:
-  #   container_name: backend
-  #   build:
-  #     context: backend
-  #     dockerfile: Dockerfile
-  #   command: "yarn start"
-  #   ports:
-  #     - "4000:8000"
+  contracts:
+    container_name: quartz-node
+    build:
+      context: contracts
+      dockerfile: Dockerfile
+    command: "yarn run hardhat node"
+    ports:
+      - "8545:8545"
+  backend:
+    container_name: quartz-backend
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    command: "yarn start"
+    ports:
+      - "8080:8080"
