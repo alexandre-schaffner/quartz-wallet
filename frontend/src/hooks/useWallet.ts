@@ -1,6 +1,6 @@
 import type { Accessor } from "solid-js";
 import { createSignal, createRenderEffect, onMount, onCleanup } from "solid-js";
-import { BigNumber, BrowserProvider, Provider, ethers} from "ethers";
+import { BrowserProvider, Eip1193Provider, Provider, ethers } from "ethers";
 
 function useWallet(): {
   chainId: Accessor<number | undefined>;
@@ -15,9 +15,9 @@ function useWallet(): {
 
   async function connectBrowserWallet(askSigner: boolean = true) {
     const _provider = new BrowserProvider(window.ethereum, "any");
-    
+
     if (!_provider) return;
-    
+
     setProvider(_provider);
     console.log(`🖧 Connected to network ${(await _provider.getNetwork()).chainId}`);
 
@@ -34,10 +34,9 @@ function useWallet(): {
       console.log("🦊 Browser Wallet not connected");
       setConnected(false);
     }
-
   }
 
-  connectBrowserWallet(false)
+  connectBrowserWallet(false);
 
   function onChainChange(chainId: string) {
     const newChainId = parseInt(chainId);
