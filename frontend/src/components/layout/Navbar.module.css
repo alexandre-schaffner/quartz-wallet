@@ -12,7 +12,7 @@ nav.bar {
   right: var(--space-l);
   bottom: var(--space-l);
 
-  border-radius: var(--radius-l);
+  border-radius: var(--radius-m);
   background-color: var(--color-bg-rev);
 
   transition-duration: var(--duration-layout);
@@ -35,7 +35,7 @@ nav a {
   justify-content: center;
   display: flex;
 
-  border-radius: calc(var(--radius-l) - var(--space-m));
+  border-radius: calc(var(--radius-m) - var(--space-m));
   -webkit-tap-highlight-color: transparent;
 
   text-decoration: none;
@@ -72,6 +72,7 @@ nav.desktop {
   justify-content: center;
   align-items: center;
   background-color: var(--color-bg-rev);
+  gap: var(--space-m);
 
   width: 200px;
   font-size: 1.2em;
@@ -88,5 +89,8 @@ nav.bar.off {
 nav a.selected {
   background-color: var(--color-accent-0);
   color: var(--color-bg-rev);
-  
+}
+
+nav a:not(.selected) {
+  border-color: transparent;
 }

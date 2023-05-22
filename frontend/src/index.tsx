@@ -4,6 +4,7 @@ import { Router } from "@solidjs/router";
 
 import './styles/global.css';
 import './styles/theme.css';
+import './styles/fonts.css';
 
 import App from './App';
 import { ThemeProvider } from './hooks/ThemeProvider';

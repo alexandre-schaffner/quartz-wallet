@@ -1,7 +1,9 @@
-FROM node:latest AS build
+FROM node:18 AS build
 WORKDIR /build
 
 ADD package*.json /build
+ADD erc4337/ /build
+RUN ls /build/
 RUN yarn
 
 ADD . /build
@@ -9,4 +11,4 @@ ADD . /build
 ENV PORT 8545
 EXPOSE $PORT
 
-CMD ["yarn", "run", "hardhat", "node"]
+CMD yarn run hardhat node & yarn run hardhat run scripts/deploy-basic-wallet.ts --network hardhat

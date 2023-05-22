@@ -16,7 +16,6 @@ services:
     build:
       context: contracts
       dockerfile: Dockerfile
-    command: "yarn run hardhat node"
     ports:
       - "8545:8545"
     volumes:

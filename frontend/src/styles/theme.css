@@ -25,14 +25,16 @@
   --duration-fast: 100ms;
   --duration-layout: 300ms;
 
-  --border-m: 3px;
+  --border-s: 1px;
+  --border-m: 2px;
+  --border-l: 5px;
   --color-border: #010101;
 }
 
 .light,
 .dark {
   --radius-s: 4px; /* content */
-  --radius-m: 12px; /* buttons */
+  --radius-m: 100vmax; /* buttons */
   --radius-l: 24px; /* cards */
 
   --space-s: 2px;
