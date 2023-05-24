@@ -11,4 +11,4 @@ ADD . /build
 ENV PORT 8545
 EXPOSE $PORT
 
-CMD yarn run hardhat node & yarn run hardhat run scripts/deploy-basic-wallet.ts --network hardhat
+CMD bash -c "sleep 10; yarn run hardhat run scripts/deploy-basic-wallet.ts --network localhost" & yarn run hardhat node

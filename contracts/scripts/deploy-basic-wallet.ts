@@ -3,6 +3,8 @@ import { ethers } from "hardhat";
 async function main() {
   const [owner] = await ethers.getSigners();
 
+  console.log("[Deploying] Basic wallet context...")
+
   const EntryPoint = await ethers.getContractFactory("EntryPoint");
   const entryPoint = await EntryPoint.deploy();
 
@@ -11,6 +13,7 @@ async function main() {
 
   await wallet.deployed();
 
+  console.log("\x1b[93m\x1b[3m%s\x1b[0m", "[Deployed] Basic wallet context:")
   console.log(`EntryPoint (${entryPoint.address})`);
   console.log(`Wallet (${entryPoint.address})`);
 }
