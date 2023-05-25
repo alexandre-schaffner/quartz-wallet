@@ -2,6 +2,7 @@ FROM node:latest AS build
 WORKDIR /build
 
 ADD package*.json /build
+ADD solid-ethers/ /build/solid-ethers
 RUN yarn
 
 ADD . /build

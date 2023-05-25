@@ -17,6 +17,7 @@
   "dependencies": {
     "@solidjs/router": "^0.8.2",
     "ethers": "^6.3.0",
+    "solid-ethers": "file:solid-ethers",
     "solid-js": "^1.6.10"
   }
 }

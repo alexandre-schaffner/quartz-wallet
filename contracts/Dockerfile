@@ -3,7 +3,6 @@ WORKDIR /build
 
 ADD package*.json /build
 ADD erc4337/ /build
-RUN ls /build/
 RUN yarn
 
 ADD . /build
