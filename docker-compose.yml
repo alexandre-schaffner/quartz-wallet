@@ -11,6 +11,7 @@ services:
       - "3000:3000"
     volumes:
       - "./frontend:/build"
+      - contracts-config:/build/contracts_config
   contracts:
     container_name: quartz-node
     build:
@@ -20,6 +21,7 @@ services:
       - "8545:8545"
     volumes:
       - "./contracts:/build"
+      - contracts-config:/build/contracts_config
   backend:
     container_name: quartz-backend
     build:
@@ -30,3 +32,5 @@ services:
       - "8080:8080"
     volumes:
       - "./backend:/build"
+volumes:
+  contracts-config:
